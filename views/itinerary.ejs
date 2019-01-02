@@ -1,0 +1,28 @@
+<%- include('partials/header', {title: "Vivid Travel | Your Itinenary"}); %>
+<body>
+  <% include partials/nav %>
+  <main>
+    <div class="hero">
+      <h1>Your Itinenary to<br/> <%= data.destination %></h1>
+    </div>
+    <div class="itinerary">
+        <a class="back-button" href="/">< Back</a>
+        <% var lastDate = ""; %>
+        <% data.itinerary.forEach( item => { %>
+          <% if (lastDate !== item.date) { %>
+            <p class="highlight-date"><%= moment(item.date).format('Do MMMM YYYY') %></p>
+          <% lastDate = item.date }%>
+          <div class="event-container">
+            <div>
+                <i class="fas <%= item.action %>"></i>
+                <p class="time"><%= item.time %></p>
+            </div>
+            <div class="event-discription">
+                <p><%= item.description %></p>
+            </div>
+          </div>
+      <% }) %>
+    </div>
+  </main>
+</body>
+</html>
