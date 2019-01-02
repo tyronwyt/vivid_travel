@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+  <%- include('partials/header', {title: "Vivid Travel | Your Itinenary"}); %>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to my<%= title %></p>
+    <% include partials/nav %>
+    <main>
+        <h1><%= title %></h1>
+        <p>Welcome to <%= title %></p>
+    </main>
   </body>
 </html>
