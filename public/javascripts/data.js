@@ -12,6 +12,7 @@ module.exports = {
                     "date" : "03/10/2019",
                     "days" : 12,
                     "destination" : "Cape Town",
+                    "destination_slug" : "cape_town",
                     "pax" : 2,
                     "itinerary" : [
                             {  "date" : "03/10/2019",
@@ -31,6 +32,7 @@ module.exports = {
                     "date" : "10/03/2019",
                     "days" : 12,
                     "destination" : "Singapore",
+                    "destination_slug" : "singapore",
                     "pax" : 2,
                     "itinerary" : [
                         {  "date" : "10/03/2019",

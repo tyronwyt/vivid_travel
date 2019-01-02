@@ -2,8 +2,24 @@
   <body>
     <% include partials/nav %>
     <main>
-        <h1><%= title %></h1>
-        <p>Welcome to <%= title %></p>
+      <div class="hero">
+        <h1>Welcome <%= data.first_name %> <%= data.last_name %></h1>
+        <h3>View all of your holiday bookings below</h3>
+      </div>
+      <div>
+          <% data.packages.forEach( package => { %>
+            <h2 class="date-highlight"><span><%= moment(package.date).format('MMMM YYYY') %></span></h2>
+            <div class="booking-container">
+                <img src="/images/destinations/<%= package.destination_slug %>.jpg" alt="<%= package.destination %>"/>
+                  <div class="booking-content">
+                      <h2><%= package.destination %></h2>
+                      <p class="booking-date"><%= moment(package.date).format('Do MMMM YYYY') %> | <%= package.days %> Days</p>
+                      <p>Booking Id: <%= package.booking_id %></p>
+                      <a href="/itinerary/<%= package.booking_id %>">View Itinerary</a>
+                  </div>
+            </div>
+            <% }) %>
+      </div>
     </main>
   </body>
 </html>
