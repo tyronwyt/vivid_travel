@@ -131,4 +131,48 @@ nav {
 .event-discription {
   padding-left: 20px; }
 
+.login-container {
+  background: url("/images/splash-screen.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box; }
+
+.splash-logo {
+  width: 60%;
+  margin: 20vh auto 0 auto; }
+
+.splash-logo img {
+  max-width: 100%; }
+
+.login-form {
+  width: 80%;
+  background-color: white;
+  margin: 3em auto 0 auto;
+  box-shadow: 0 6px 3px rgba(0, 0, 0, 0.17);
+  padding: 20px;
+  box-sizing: border-box; }
+
+.login-form input {
+  background: #eee;
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  height: 30px;
+  margin: .5em 0;
+  padding: 0 5px; }
+
+.login-button {
+  background-color: #00AAFF;
+  color: white;
+  padding: 10px 30px;
+  text-decoration: none;
+  cursor: pointer; }
+
+.login-button-wrapper {
+  margin-top: 1em;
+  text-align: center; }
+
 /*# sourceMappingURL=style.css.map */
